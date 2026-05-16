@@ -33,6 +33,7 @@
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
         <a href="birthday.html" class="active">Birthday</a>
+        <a href="#feedback">Feedback</a>
         <a href="contact.html">Contact</a>
       </div>
       <button class="cart-trigger" onclick="openCart()">
@@ -359,6 +360,75 @@
       <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--cream3); border: 1px solid var(--gold); cursor: pointer;"></div>
     </div>
 
+  </section>
+
+  <!-- FEEDBACK & COMPLAINTS SECTION -->
+  <section id="feedback" style="padding: 100px 24px; background: var(--cream);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span class="section-label" style="display: block; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px;">Your Voice Matters</span>
+        <h2 class="section-title" style="margin-bottom: 20px; font-family: 'Playfair Display', serif; font-size: 38px; color: var(--brown);">Feedback & <em>Complaints</em></h2>
+        <p style="max-width: 600px; margin: 20px auto; color: var(--text2); font-family: 'Cormorant Garamond', serif; font-size: 18px; opacity: 0.8;">
+          We strive for perfection in every bite. Share your experience or let us know if something wasn't right.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+        
+        <!-- Feedback Area -->
+        <div style="background: var(--white); padding: 40px; border-radius: 12px; box-shadow: var(--shadow); border-left: 5px solid var(--gold);">
+          <h3 style="font-family: 'Playfair Display', serif; margin-bottom: 20px; color: var(--brown);">Leave a Review</h3>
+          <form onsubmit="event.preventDefault(); showToast('Thank you for your feedback! ⭐'); this.reset();">
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; font-weight: 700;">Rating</label>
+              <div style="display: flex; gap: 5px; font-size: 24px; color: var(--gold); cursor: pointer;">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span style="color: var(--cream3);">★</span>
+              </div>
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; font-weight: 700;">Name</label>
+              <input type="text" placeholder="Your Name" required
+                style="width: 100%; padding: 12px; border: 1.5px solid var(--cream3); border-radius: 8px; outline: none; font-family: 'DM Sans', sans-serif;">
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; font-weight: 700;">Message</label>
+              <textarea placeholder="Tell us about your experience..." rows="4" required
+                style="width: 100%; padding: 12px; border: 1.5px solid var(--cream3); border-radius: 8px; outline: none; font-family: 'DM Sans', sans-serif; resize: none;"></textarea>
+            </div>
+            <button class="btn-primary" type="submit" style="width: 100%; padding: 16px;">Submit Review</button>
+          </form>
+        </div>
+
+        <!-- Complaint Area -->
+        <div style="background: var(--white); padding: 40px; border-radius: 12px; box-shadow: var(--shadow); border-left: 5px solid var(--brown);">
+          <h3 style="font-family: 'Playfair Display', serif; margin-bottom: 20px; color: var(--brown);">Report an Issue</h3>
+          <form onsubmit="event.preventDefault(); showToast('Complaint received. We will look into it. 🛠️'); this.reset();">
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; font-weight: 700;">Subject</label>
+              <select required style="width: 100%; padding: 12px; border: 1.5px solid var(--cream3); border-radius: 8px; outline: none; font-family: 'DM Sans', sans-serif; background: var(--white);">
+                <option value="">Select an issue</option>
+                <option value="delivery">Delivery Delay</option>
+                <option value="quality">Food Quality</option>
+                <option value="payment">Payment Issue</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; font-weight: 700;">Order ID (Optional)</label>
+              <input type="text" placeholder="BB-YYYYMMDD-XXXX"
+                style="width: 100%; padding: 12px; border: 1.5px solid var(--cream3); border-radius: 8px; outline: none; font-family: 'DM Sans', sans-serif;">
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; font-weight: 700;">Description</label>
+              <textarea placeholder="Describe the problem in detail..." rows="4" required
+                style="width: 100%; padding: 12px; border: 1.5px solid var(--cream3); border-radius: 8px; outline: none; font-family: 'DM Sans', sans-serif; resize: none;"></textarea>
+            </div>
+            <button class="btn-primary" type="submit" style="width: 100%; padding: 16px; background: var(--brown); color: var(--white);">Submit Complaint</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <!-- FOOTER -->
